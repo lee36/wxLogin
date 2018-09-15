@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a href="#" id="wx">微信登录</a>
+    <script src="/webjars/jquery/jquery.js"></script>
+    <script>
+        $.ajax({
+            url:"/user/getWxLoginUrl?access_page=login.html",
+            success:function(data){
+                $("#wx").attr("href",data);
+            }
+        })
+    </script>
+</body>
+</html>
